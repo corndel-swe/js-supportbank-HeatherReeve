@@ -6,7 +6,7 @@ transactionController
   .command('log <from> <to> <amount>')
   .description('Log transaction data to the console')
   .action((from, to, amount) => {
-    console.log("hello")
+   console.log(`logging transaction of ${amount} from ${from} to ${to}`)
   })
 
 export default transactionController
