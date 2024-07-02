@@ -23,7 +23,7 @@ export async function writeSaveData(saveData) {
 
   // The data is converted to a string for you:
   const saveDataString = JSON.stringify(saveData)
-
+   await fs.writeFile (path, saveDataString)
   // TODO: Write the saveData string to the file
 }
 
@@ -31,6 +31,6 @@ export async function writeSaveData(saveData) {
 export async function appendLogEntry(logEntry) {
   // The text to append is given:
   const textToAppend = logEntry + '\n'
-
+await fs.appendFile('./exercises/resources/4-log-file.txt', textToAppend)
   // TODO: Append the text to the file
 }
