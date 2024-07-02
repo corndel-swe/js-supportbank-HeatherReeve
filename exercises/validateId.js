@@ -36,6 +36,11 @@ export function validateId(id) {
 // Return `true` if the id is valid.
 // If an error is thrown: catch it, log a useful message, then return `false`
 export function isIdValid(id, logger) {
+  try {
+    validateId(id)
+    return true
+  } catch (error){
   logger.error('ID is invalid')
-  return null
+  return false
+}
 }
