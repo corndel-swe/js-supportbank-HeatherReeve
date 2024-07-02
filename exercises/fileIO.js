@@ -4,13 +4,16 @@ import fs from 'fs/promises'
 export async function readHelloWorld() {
   // The path is provided for you:
   const path = new URL('./resources/1-hello-world.txt', import.meta.url)
+const txt = await fs.readFile (path, 'utf-8' )
+return txt
 
-  // TODO: Return the contents of the file as a utf-8 string
 }
 
 // Part 2: Return the contents of ./resources/2-diary-entry.txt
 export async function readDiaryEntry() {
   // TODO: Return the contents of the file as a utf-8 string
+  const txt = await fs.readFile ('./exercises/resources/2-diary-entry.txt', 'utf-8')
+  return txt
 }
 
 // Part 3: Overwrite ./resources/3-save-data.txt with saveDataString
