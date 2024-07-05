@@ -13,4 +13,3 @@ program.addCommand(spendingChecker)
 
 program.parse(process.argv)
 
-
